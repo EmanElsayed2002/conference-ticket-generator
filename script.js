@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ticketAvatar.src = event.target.result;
       };
       reader.readAsDataURL(file);
-      imageError.classList.add("error");
     } else {
       imageError.innerText =
         "File too large. Please upload a photo under 500KB.";
@@ -42,12 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const fullName = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
     const github = document.getElementById("github").value.trim();
-    const imageFile = fileInput.files[0]; // Get the selected image file
+    const imageFile = fileInput.files[0];
 
     nameError.innerText = "";
     emailError.innerText = "";
     githubError.innerText = "";
-    // imageError.innerText = ""; // Reset image error
 
     const nameRegex = /^[A-Za-z\s]{2,}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -74,13 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!imageFile) {
       imageError.classList.add("error");
+    } else {
+      imageError.classList.remove("error");
     }
 
     if (
       nameError.innerText === "" &&
       emailError.innerText === "" &&
       githubError.innerText === "" &&
-      imageError.innerText === "" // Ensure no image error
+      !imageError.classList.contains("error")
     ) {
       time.innerText = new Date().toLocaleString();
       outputName.textContent = fullName;
