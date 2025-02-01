@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./resources/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <img
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt=""
+      class="bg-images img1"
+    />
+    <img
+      src="./assets/images/pattern-squiggly-line-top.svg"
+      alt=""
+      class="bg-images img2"
+    />
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt=""
+      class="bg-images img3"
+    />
+    <img
+      src="./assets/images/pattern-lines.svg"
+      alt=""
+      class="bg-images img4"
+    />
+    <img
+      src="./assets/images/pattern-circle.svg"
+      alt=""
+      class="bg-images img5"
+    />
+    <header>
+      <img
+        src="./assets/images/logo-full.svg"
+        alt="Conference Logo"
+        class="logo"
+      />
+    </header>
+    <main>
+      <div class="hidden-div">
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+        <form id="ticketForm">
+          <div class="form-group">
+            <label>Upload Avatar</label>
+            <div class="upload-area">
+              <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
+              <p>Drag and drop or click to upload</p>
+            </div>
+            <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+          </div>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              placeholder="EmanElsayed"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="example@email.com"
+            />
+          </div>
+          <div class="form-group">
+            <label>GitHub Username</label>
+            <input
+              type="text"
+              id="github"
+              required
+              placeholder="@yourusername"
+            />
+          </div>
+          <button type="submit">Generate My Ticket</button>
+        </form>
+      </div>
+      <div id="ticketOutput" class="hidden">
+        <h2>Congrats, <span id="outputName"></span>! Your ticket is ready.</h2>
+        <p>
+          We've emailed your ticket to
+          <span id="outputEmail">Eman Elsayed</span> and will send updates in
+          the run up to the event.
+        </p>
+        <div class="ticket">
+          <div class="ticket-header">
+            <img src="./assets/images/logo-mark.svg" alt="Ticket Logo" />
+            <h3>Coding Conf</h3>
+            <p class="time"></p>
+          </div>
+          <div class="ticket-body">
+            <span class="code">#1234</span>
+            <img
+              src="./assets/images/image-avatar.jpg"
+              alt="User Avatar"
+              id="ticketAvatar"
+            />
+            <div class="info">
+              <p id="ticketName">Eman Elsayed</p>
+              <p>
+                <img
+                  src="./assets/images/icon-github.svg"
+                  alt="GitHub Icon"
+                  id="ticketGithub"
+                />
+                <span class="name-github">EmanElsayed</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="https://github.com/romrauq">John Quarmor</a>.
+      </p>
+    </footer>
+  </body>
+</html>
