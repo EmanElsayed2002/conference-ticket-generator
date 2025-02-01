@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nameError.innerText === "" &&
       emailError.innerText === "" &&
       githubError.innerText === "" &&
-      imageError.innerText === "" // Ensure no image error
+      
     ) {
       time.innerText = new Date().toLocaleString();
       outputName.textContent = fullName;
