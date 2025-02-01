@@ -200,13 +200,6 @@ button:hover {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .ticket {
-    width: 750px;
-    /* margin: 20px auto; */
-  }
-}
-
 .ticket-header,
 .ticket-body {
   display: flex;
