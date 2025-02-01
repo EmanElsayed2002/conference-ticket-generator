@@ -57,34 +57,25 @@
               <img src="./assets/images/icon-upload.svg" alt="Upload Icon" />
               <p>Drag and drop or click to upload</p>
             </div>
-            <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+            <small id="image-error" class="">
+              <img src="./assets/images/icon-info.svg" alt="" />
+              <span> Upload your photo (JPG or PNG, max size: 500KB).</span>
+            </small>
           </div>
           <div class="form-group">
             <label>Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              placeholder="EmanElsayed"
-              required
-            />
+            <input type="text" id="fullName" placeholder="EmanElsayed" />
+            <span id="name-error" class="error"></span>
           </div>
           <div class="form-group">
             <label>Email Address</label>
-            <input
-              type="email"
-              id="email"
-              required
-              placeholder="example@email.com"
-            />
+            <input type="email" id="email" placeholder="example@email.com" />
+            <span id="email-error" class="error"></span>
           </div>
           <div class="form-group">
             <label>GitHub Username</label>
-            <input
-              type="text"
-              id="github"
-              required
-              placeholder="@yourusername"
-            />
+            <input type="text" id="github" placeholder="@yourusername" />
+            <span id="github-error" class="error"></span>
           </div>
           <button type="submit">Generate My Ticket</button>
         </form>
